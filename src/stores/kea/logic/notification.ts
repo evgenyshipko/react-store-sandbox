@@ -23,8 +23,10 @@ export const notificationLogic = kea<notificationLogicType<NotificationType>>({
             null,
             {
                 // @ts-ignore
-                showNotification: ({ data }: { data: NotificationType }) =>
-                    data,
+                showNotification: (
+                    _state: NotificationType,
+                    { data }: { data: NotificationType }
+                ) => data,
                 hideNotification: () => null,
             },
         ],
